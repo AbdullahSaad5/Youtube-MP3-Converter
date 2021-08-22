@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>YouTube to mp3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="circles" id="circle1"></div>
+    <div class="circles" id="circle2"></div>
+    <div id="container" class="container">
+        <h1 id="title">YouTube to MP3</h1>
+        <input type="text" name="url" id="url">
+        <button id="submit" class="submit disabled" disabled>Process</button>
+        <div id="video-container">
+            <div id="loader">
+                <img src="loading.svg" alt="">
+            </div>
+            <div id="video">
+                <img id="thumbnail" src="" alt="Video Thumbnail">
+                <div id="video-details">
+                    <label id="video-title"></label>
+                    <label id="video-size"></label>
+                    <a id="download-link">Download Audio</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
