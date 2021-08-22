@@ -7,16 +7,6 @@ const downloadLink = document.getElementById("download-link");
 const videoContainer = document.getElementById("video");
 const loader = document.getElementById("loader");
 
-input.addEventListener("keyup", () => {
-  if (input.value.length > 0) {
-    button.classList.remove("disabled");
-    button.disabled = false;
-  } else {
-    button.classList.add("disabled");
-    button.disabled = true;
-  }
-});
-
 function getVideoID(url) {
   if (url.includes("youtube")) {
     return url.split("v=")[1];
@@ -62,5 +52,15 @@ async function getLink() {
 button.addEventListener("click", () => {
   if (!button.disabled) {
     getLink();
+  }
+});
+
+input.addEventListener("input", () => {
+  if (input.value.length > 0) {
+    button.classList.remove("disabled");
+    button.disabled = false;
+  } else {
+    button.classList.add("disabled");
+    button.disabled = true;
   }
 });
